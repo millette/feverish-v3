@@ -1,26 +1,17 @@
 {
-  "connections": [
-    {
-      "port": 48080
-    }
-  ],
+  "connections": [ { "port": 48080 } ],
   "registrations": [
-    {
-      "plugin": "vision"
-    },
+    { "plugin": "vision" },
+    { "plugin": "./plugins/hello-world" },
     {
       "plugin": {
         "register": "visionary",
         "options": {
           "engines": { "html": "lodash-vision" },
+          "isCached": false,
           "path": "templates",
           "partialsPath": "templates/partials"
         }
-      }
-    },
-    {
-      "plugin": {
-        "register": "./plugins/hello-world"
       }
     }
   ]
