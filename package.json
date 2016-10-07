@@ -9,6 +9,7 @@
   "scripts": {
     "jsonlint": "eslint --ext .json .",
     "lint": "standard",
+    "lintall": "standard && npm run jsonlint",
     "test": "standard"
   },
   "keywords": [

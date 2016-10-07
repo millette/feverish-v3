@@ -9,6 +9,24 @@ const after = (options, server, next) => {
 
   server.route({
     method: 'GET',
+    path: '/exercices',
+    handler: { view: { template: 'exercices' } }
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/rendus',
+    handler: { view: { template: 'rendus' } }
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/resultats',
+    handler: { view: { template: 'score' } }
+  })
+
+  server.route({
+    method: 'GET',
     path: '/testing',
     handler: { view: { template: 'testing' } }
   })
