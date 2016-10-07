@@ -1,0 +1,60 @@
+<%= partials.head({ title: 'Inscrire un étudiant' }) %>
+<body>
+<%= partials.mainmenu(data) %>
+<%= partials.breadcrumbs({ title: 'Inscrire un étudiant', paths: [['etudiants', 'Étudiants']], last: 'Inscrire' }) %>
+<div class="row">
+  <div class="column small-12 medium-10 medium-offset-1 large-6 large-offset-3">
+    <form id="new-student" method="get" action="/etudiants">
+      <fieldset class="fieldset callout primary">
+      <div class="row">
+        <div class="small-4 column medium-6">
+          <label for="firstname-label" class="text-right middle">Prénom</label>
+        </div>
+        <div class="small-8 column medium-6">
+          <input class="keyed" type="text" id="firstname-label" name="firstname" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 column medium-6">
+          <label for="lastname-label" class="text-right middle">Nom de famille</label>
+        </div>
+        <div class="small-8 column medium-6">
+          <input class="keyed" type="text" id="lastname-label" name="lastname" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 column medium-6">
+          <label for="titre-label" class="text-right middle">Nom (login)</label>
+        </div>
+        <div class="small-8 column medium-6">
+          <input type="text" id="titre-label" name="title" required readonly>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 column medium-6">
+          <label for="titre2-label" class="text-right middle">Mot de passe (matricule)</label>
+        </div>
+        <div class="small-8 column medium-6">
+          <input type="password" id="titre2-label" name="password" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-4 column medium-6">
+          <label for="titre3-label" class="text-right middle">Mot de passe (répétez)</label>
+        </div>
+        <div class="small-8 column medium-6">
+          <input type="password" id="titre3-label" name="password2" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="small-offset-4 small-8 medium-6 medium-offset-6 column">
+          <input class="button expanded" type="submit" value="Inscrire">
+        </div>
+      </div>
+    </fieldset>
+    </form>
+  </div>
+</div>
+<%= partials.js({ custom: ['etudiants-new'] }) %>
+</body>
+</html>

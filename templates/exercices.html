@@ -1,0 +1,26 @@
+<%= partials.head({ exercicesTable: true, title: 'Les exercices' }) %>
+<body>
+<% data.active = 'exercices' %>
+<%= partials.mainmenu(data) %>
+<%= partials.breadcrumbs({ title: 'Les exercices', last: 'Exercices' }) %>
+<% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+<p><a class="button hollow" href="/new">Créer un exercice</a></p>
+<% } %>
+<table class="hover">
+  <tbody>
+  <% data.rows.forEach(function (row) { %>
+    <tr>
+      <td><%- row.title %></td>
+      <td><%- row.createdAt.split('T')[0] %></td>
+      <%= data.userMenu(row) %>
+    </tr>
+  <% }) %>
+  </tbody>
+</table>
+<% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+<%= partials.js({ custom: ['exercices'] }) %>
+<% } else { %>
+<%= partials.js() %>
+<% } %>
+</body>
+</html>

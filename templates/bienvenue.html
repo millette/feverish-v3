@@ -1,0 +1,18 @@
+<%= partials.head({ medium: true, title: 'Accueil' }) %>
+<body>
+<% data.active = 'accueil' %>
+<%= partials.mainmenu(data) %>
+<div id="header" class="row column text-center">
+<img src="/img/header.png" alt="entête">
+</div>
+<%= partials.breadcrumbs({ title: data.title }) %>
+<div id="main-editor">
+<%= data.content %>
+</div>
+<div><img src="/img/exemple.jpg" alt="exemple de rendu"></div>
+<%= partials.js({ medium: data.editor }) %>
+<% if (data.editor) { %>
+<script type="text/javascript" src="/js/editor.js"></script>
+<% } %>
+</body>
+</html>

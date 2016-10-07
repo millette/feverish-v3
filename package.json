@@ -1,0 +1,31 @@
+{
+  "name": "f3",
+  "version": "1.0.0",
+  "description": "stuff",
+  "main": "index.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "standard"
+  },
+  "keywords": [
+    "stuff"
+  ],
+  "author": {
+    "name": "Robin Millette",
+    "email": "robin@millette.info",
+    "url": "http://robin.millette.info"
+  },
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "rejoice": "^3.3.1",
+    "standard": "^8.3.0"
+  },
+  "dependencies": {
+    "lodash-vision": "file:///home/millette/lodash-vision",
+    "vision": "^4.1.0",
+    "visionary": "^6.0.2"
+  }
+}

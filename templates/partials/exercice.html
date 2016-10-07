@@ -1,0 +1,15 @@
+<h3><%- data.doc.title %></h3>
+<ul>
+<% if (data.doc.travail) { %>
+<li>Travail: <%- data.doc.travail %></li>
+<% } %>
+<% if (data.doc.theme) { %>
+<li>Thème: <%- data.doc.theme %></li>
+<% } %>
+<% if (data.doc.ponderation) { %>
+<li>Pondération sur <%- data.doc.ponderation %></li>
+<% } %>
+</ul>
+<% if (data.doc.descriptif || data.doc.description) { %>
+<p><%= data.doc.descriptif || data.doc.description %></p>
+<% } %>

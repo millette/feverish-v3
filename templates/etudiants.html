@@ -1,0 +1,18 @@
+<%= partials.head({ studentlist: true, title: 'Les étudiants' }) %>
+<body>
+<%= partials.mainmenu({ roles: data.roles, active: 'etudiants', name: data.name }) %>
+<%= partials.breadcrumbs({ title: 'Les étudiants', last: 'Étudiants' }) %>
+<p>
+<a class="button hollow" href="/etudiants/new">Nouvel étudiant</a>
+<a class="button hollow" href="/etudiants/lot">Inscrire des étudiants en lot</a>
+</p>
+<table id="studentlist" class="hover">
+<thead>
+<tr><th>Login</th><th>Consulter</th><th>Effacer</th></tr>
+</thead>
+<tbody<%- data.fixer ? ' data-fixer="true"' : '' %>>
+</tbody>
+</table>
+<%= partials.js({ custom: ['etudiants'] }) %>
+</body>
+</html>

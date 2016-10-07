@@ -1,0 +1,46 @@
+<% if (!data.roles) { data.roles = [] } %>
+<div class="top-bar">
+  <div class="top-bar-left">
+    <% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+    <ul class="menu dropdown" data-dropdown-menu>
+    <% } else { %>
+    <ul class="menu">
+    <% } %>
+      <li<%= data.active === 'accueil' ? ' class="active"' : '' %>><a href="/">Accueil</a></li>
+      <% if (data.roles && data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+      <li<%= data.active === 'etudiants' ? ' class="active"' : '' %>>
+        <a href="/etudiants">Étudiants</a>
+        <ul class="menu">
+          <li><a href="/etudiants/new">Inscrire</a></li>
+          <li><a href="/etudiants/lot">Inscrire en lot</a></li>
+        </ul>
+      </li>
+      <li<%= data.active === 'exercices' ? ' class="active"' : '' %>>
+        <a href="/exercices">Exercices</a>
+        <ul class="menu">
+          <li><a href="/new">Créer un exercice</a></li>
+        </ul>
+      </li>
+      <% } else { %>
+      <li<%= data.active === 'exercices' ? ' class="active"' : '' %>>
+        <a href="/exercices">Exercices</a>
+      </li>
+      <% } %>
+      <li<%= data.active === 'rendus' ? ' class="active"' : '' %>><a href="/rendus">Rendus de référence</a></li>
+    </ul>
+  </div>
+  <div class="top-bar-right">
+    <ul class="menu">
+      <% if (data.roles && data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+      <li<%= data.active === 'configure' ? ' class="active"' : '' %>><a href="/configure">Configurer</a></li>
+      <li class="menu-text"> </li>
+      <li><button data-adminname="<%- data.name %>" class="adminname button secondary hollow"> &#x1f464; <%- data.name %></button></li>
+      <% } else { %>
+      <li<%= data.active === 'resultats' ? ' class="active"' : '' %>><a href="/resultats">Mes résultats</a></li>
+      <li class="menu-text"> </li>
+      <li class="menu-text"> &#x1f464; <%- data.name %></li>
+      <% } %>
+      <li><button type="button" class="button secondary logout">Me déconnecter</button></li>
+    </ul>
+  </div>
+</div>
