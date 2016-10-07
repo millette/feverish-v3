@@ -27,11 +27,14 @@
     "standard": "^8.3.0"
   },
   "dependencies": {
+    "inert": "^4.0.2",
     "lodash-vision": "file:///home/millette/lodash-vision",
     "vision": "^4.1.0",
     "visionary": "^6.0.2"
   },
   "eslintConfig": {
-    "plugins": ["json"]
+    "plugins": [
+      "json"
+    ]
   }
 }
