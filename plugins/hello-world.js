@@ -5,7 +5,7 @@ const after = (options, server, next) => {
     method: 'GET',
     path: '/',
     handler: { view: { template: 'bienvenue',
-        context: { name: 'joséanne', roles: ['student'] }
+        context: { name: 'joséanne', roles: ['student'], active: 'accueil' }
 
        } }
   })
@@ -14,7 +14,11 @@ const after = (options, server, next) => {
     method: 'GET',
     path: '/exercices',
     handler: { view: { template: 'exercices',
-        context: { name: 'joséanne', roles: ['student'] }
+        context: { name: 'joséanne', roles: ['student'],
+active: 'exercices',
+rows: [],
+
+           }
 
        } }
   })
@@ -24,8 +28,16 @@ const after = (options, server, next) => {
     path: '/rendus',
     handler: {
       view: {
+
         template: 'rendus',
-        context: { name: 'joséanne', roles: ['student'] }
+        context: {
+rows: [],
+           name: 'joséanne', roles: ['student'], active: 'rendus'
+
+
+
+
+           }
       }
     }
   })
@@ -34,7 +46,12 @@ const after = (options, server, next) => {
     method: 'GET',
     path: '/resultats',
     handler: { view: { template: 'score',
-        context: { name: 'joséanne', roles: ['student'] }
+        context: { name: 'joséanne', roles: ['student'],
+doc: { _id: 'aaa', _rev: '2-bbb', title: 'joséanne' },
+active: 'resultats'
+
+
+           }
 
        } }
   })

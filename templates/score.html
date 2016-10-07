@@ -1,8 +1,3 @@
-<%
-if (!data.doc) { data.doc = { _id: 'aaa', _rev: '2-bbb', title: data.name } }
-data.active = 'resultats'
-
-%>
 <%= partials.head({ title: 'Résultat du rendu de ' + data.name }) %>
 <body data-exercicerev="<%- data.doc._rev %>" data-exercice="<%- data.doc._id %>" data-student="<%- data.name %>" data-ponderation="<%- data.doc.ponderation %>">
 <%= partials.mainmenu(data) %>

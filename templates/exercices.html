@@ -1,6 +1,5 @@
 <%= partials.head({ exercicesTable: true, title: 'Les exercices' }) %>
 <body>
-<% data.active = 'exercices' %>
 <%= partials.mainmenu(data) %>
 <%= partials.breadcrumbs({ title: 'Les exercices', last: 'Exercices' }) %>
 <% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>

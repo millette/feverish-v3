@@ -1,9 +1,6 @@
 <%= partials.head({ title: 'Les rendus de référence' }) %>
 <body>
-<%
-data.active = 'rendus'
-var r
-%>
+<% var r %>
 <%= partials.mainmenu(data) %>
 <%= partials.breadcrumbs({ title: 'Les rendus de référence', last: 'Rendus' }) %>
 <% data.rows.forEach(function (row) { %>

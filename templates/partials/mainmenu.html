@@ -1,7 +1,3 @@
-<%
-if (!data.rows) { data.rows = [] }
-if (!data.doc) { data.doc = { _id: 'aaa', _rev: '2-bbb' } }
-%>
 <div class="top-bar">
   <div class="top-bar-left">
     <% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
