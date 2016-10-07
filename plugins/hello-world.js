@@ -1,27 +1,25 @@
 'use strict'
 
 const after = (options, server, next) => {
-  console.log('after...')
-
   server.route({
     method: 'GET',
     path: '/',
-    config: {
-      handler: { view: { template: 'bienvenue' } },
-      description: 'Home sweet home (desc)',
-      notes: 'Home sweet home, a note',
-      tags: ['fi', 'fe', 'fo']
-    }
+    handler: { view: { template: 'bienvenue' } }
   })
 
   server.route({
     method: 'GET',
     path: '/testing',
-    config: {
-      handler: { view: { template: 'testing' } },
-      description: 'Home sweet home (desc)',
-      notes: 'Home sweet home, a note',
-      tags: ['fi', 'fe', 'fo']
+    handler: { view: { template: 'testing' } }
+  })
+
+  server.route({
+    method: 'GET',
+    path: '/{param*}',
+    handler: {
+      directory: {
+        path: './assets/'
+      }
     }
   })
 
@@ -29,8 +27,7 @@ const after = (options, server, next) => {
 }
 
 exports.register = (server, options, next) => {
-  console.log('register...')
-  server.dependency(['vision', 'visionary'], after.bind(null, options))
+  server.dependency(['inert', 'vision', 'visionary'], after.bind(null, options))
   next()
 }
 

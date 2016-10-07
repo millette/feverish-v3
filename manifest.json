@@ -1,6 +1,9 @@
 {
-  "connections": [ { "port": 48080 } ],
+  "connections": [ {
+    "port": 48080
+  } ],
   "registrations": [
+    { "plugin": "inert" },
     { "plugin": "vision" },
     { "plugin": "./plugins/hello-world" },
     {
