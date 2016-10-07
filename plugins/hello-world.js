@@ -14,6 +14,17 @@ const after = (options, server, next) => {
     }
   })
 
+  server.route({
+    method: 'GET',
+    path: '/testing',
+    config: {
+      handler: { view: { template: 'testing' } },
+      description: 'Home sweet home (desc)',
+      notes: 'Home sweet home, a note',
+      tags: ['fi', 'fe', 'fo']
+    }
+  })
+
   next()
 }
 

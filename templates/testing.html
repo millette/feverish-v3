@@ -1,0 +1,30 @@
+<%= partials.head({ title: 'Testing' }) %>
+<body>
+<%= partials.mainmenu(data) %>
+<%= partials.breadcrumbs({ title: data.title }) %>
+<div id="main-editor">
+<%= data.content %>
+</div>
+
+<p>Yes?</p>
+
+<pre>
+<%= JSON.stringify(data, null, ' ') %>
+</pre>
+
+<pre>
+<% _.forEach(data.query, (v, k) => { %>
+  <%- k %>
+  <%- v %>
+<% }) %>
+</pre>
+
+<pre>
+<% _.forEach(partials, (v, k) => { %>
+  <%- k %>
+<% }) %>
+</pre>
+
+<%= partials.js() %>
+</body>
+</html>
