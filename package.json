@@ -7,6 +7,7 @@
     "node": ">=4"
   },
   "scripts": {
+    "jsonlint": "eslint --ext .json .",
     "lint": "standard",
     "test": "standard"
   },
@@ -20,6 +21,8 @@
   },
   "license": "AGPL-3.0",
   "devDependencies": {
+    "eslint": "^3.7.1",
+    "eslint-plugin-json": "^1.2.0",
     "rejoice": "^3.3.1",
     "standard": "^8.3.0"
   },
@@ -27,5 +30,8 @@
     "lodash-vision": "file:///home/millette/lodash-vision",
     "vision": "^4.1.0",
     "visionary": "^6.0.2"
+  },
+  "eslintConfig": {
+    "plugins": ["json"]
   }
 }
