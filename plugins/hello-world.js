@@ -4,25 +4,39 @@ const after = (options, server, next) => {
   server.route({
     method: 'GET',
     path: '/',
-    handler: { view: { template: 'bienvenue' } }
+    handler: { view: { template: 'bienvenue',
+        context: { name: 'joséanne', roles: ['student'] }
+
+       } }
   })
 
   server.route({
     method: 'GET',
     path: '/exercices',
-    handler: { view: { template: 'exercices' } }
+    handler: { view: { template: 'exercices',
+        context: { name: 'joséanne', roles: ['student'] }
+
+       } }
   })
 
   server.route({
     method: 'GET',
     path: '/rendus',
-    handler: { view: { template: 'rendus' } }
+    handler: {
+      view: {
+        template: 'rendus',
+        context: { name: 'joséanne', roles: ['student'] }
+      }
+    }
   })
 
   server.route({
     method: 'GET',
     path: '/resultats',
-    handler: { view: { template: 'score' } }
+    handler: { view: { template: 'score',
+        context: { name: 'joséanne', roles: ['student'] }
+
+       } }
   })
 
   server.route({
