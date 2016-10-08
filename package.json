@@ -10,10 +10,10 @@
     "jsonlint": "eslint --ext .json .",
     "lint": "standard",
     "lintall": "standard && npm run jsonlint",
-    "test": "standard"
+    "test": "npm run lintall"
   },
   "keywords": [
-    "stuff"
+    "feverish"
   ],
   "author": {
     "name": "Robin Millette",

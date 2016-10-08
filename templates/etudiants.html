@@ -1,6 +1,6 @@
 <%= partials.head({ studentlist: true, title: 'Les étudiants' }) %>
 <body>
-<%= partials.mainmenu({ roles: data.roles, active: 'etudiants', name: data.name }) %>
+<%= partials.mainmenu({ roles: data.credentials.roles, active: 'etudiants', name: data.credentials.name }) %>
 <%= partials.breadcrumbs({ title: 'Les étudiants', last: 'Étudiants' }) %>
 <p>
 <a class="button hollow" href="/etudiants/new">Nouvel étudiant</a>

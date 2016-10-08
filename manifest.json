@@ -3,6 +3,8 @@
   "registrations": [
     { "plugin": "inert" },
     { "plugin": "vision" },
+    { "plugin": "hapi-auth-cookie" },
+    { "plugin": "hapi-context-credentials" },
     { "plugin": "feverish-routes" }
   ]
 }

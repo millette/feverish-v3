@@ -1,6 +1,6 @@
 <%= partials.head({ scorelist: true, title: (data.self ? 'Mes résultats:' : 'Résultats de') + ' ' + data.student }) %>
 <body data-student="<%- data.student %>">
-<%= partials.mainmenu({ active: data.self && 'resultats', roles: data.roles, name: data.name }) %>
+<%= partials.mainmenu({ active: data.self && 'resultats', roles: data.credentials.roles, name: data.credentials.name }) %>
 <% if (data.self) { %>
 <%= partials.breadcrumbs({ title: 'Mes résultats', subtitle: data.student, last: 'Mes résultats' }) %>
 <% } else { %>
