@@ -3,12 +3,6 @@
   "registrations": [
     { "plugin": "inert" },
     { "plugin": "vision" },
-    { "plugin": "feverish-routes" },
-    {
-      "plugin": {
-        "register": "visionary",
-        "options": { "engines": { "html": "lodash-vision" } }
-      }
-    }
+    { "plugin": "feverish-routes" }
   ]
 }
