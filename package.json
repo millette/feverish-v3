@@ -1,5 +1,5 @@
 {
-  "name": "f3",
+  "name": "feverish-v3",
   "version": "0.0.0",
   "description": "stuff",
   "main": "index.js",
@@ -28,10 +28,8 @@
     "standard": "^8.3.0"
   },
   "dependencies": {
-    "inert": "^4.0.2",
-    "lodash-vision": "file:///home/millette/lodash-vision",
-    "vision": "^4.1.0",
-    "visionary": "^6.0.2"
+    "feverish-routes": "file:///home/millette/feverish-routes",
+    "lodash-vision": "file:///home/millette/lodash-vision"
   },
   "eslintConfig": {
     "plugins": [

@@ -5,7 +5,7 @@
   "registrations": [
     { "plugin": "inert" },
     { "plugin": "vision" },
-    { "plugin": "./plugins/hello-world" },
+    { "plugin": "feverish-routes" },
     {
       "plugin": {
         "register": "visionary",
