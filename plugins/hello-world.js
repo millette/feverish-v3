@@ -4,23 +4,32 @@ const after = (options, server, next) => {
   server.route({
     method: 'GET',
     path: '/',
-    handler: { view: { template: 'bienvenue',
-        context: { name: 'joséanne', roles: ['student'], active: 'accueil' }
-
-       } }
+    handler: {
+      view: {
+        template: 'bienvenue',
+        context: {
+          name: 'joséanne',
+          roles: ['student'],
+          active: 'accueil'
+        }
+      }
+    }
   })
 
   server.route({
     method: 'GET',
     path: '/exercices',
-    handler: { view: { template: 'exercices',
-        context: { name: 'joséanne', roles: ['student'],
-active: 'exercices',
-rows: [],
-
-           }
-
-       } }
+    handler: {
+      view: {
+        template: 'exercices',
+        context: {
+          name: 'joséanne',
+          roles: ['student'],
+          active: 'exercices',
+          rows: []
+        }
+      }
+    }
   })
 
   server.route({
@@ -28,16 +37,13 @@ rows: [],
     path: '/rendus',
     handler: {
       view: {
-
         template: 'rendus',
         context: {
-rows: [],
-           name: 'joséanne', roles: ['student'], active: 'rendus'
-
-
-
-
-           }
+          rows: [],
+          name: 'joséanne',
+          roles: ['student'],
+          active: 'rendus'
+        }
       }
     }
   })
@@ -45,15 +51,17 @@ rows: [],
   server.route({
     method: 'GET',
     path: '/resultats',
-    handler: { view: { template: 'score',
-        context: { name: 'joséanne', roles: ['student'],
-doc: { _id: 'aaa', _rev: '2-bbb', title: 'joséanne' },
-active: 'resultats'
-
-
-           }
-
-       } }
+    handler: {
+      view: {
+        template: 'score',
+        context: {
+          name: 'joséanne',
+          roles: ['student'],
+          doc: { _id: 'aaa', _rev: '2-bbb', title: 'joséanne' },
+          active: 'resultats'
+        }
+      }
+    }
   })
 
   server.route({
@@ -65,11 +73,7 @@ active: 'resultats'
   server.route({
     method: 'GET',
     path: '/{param*}',
-    handler: {
-      directory: {
-        path: './assets/'
-      }
-    }
+    handler: { directory: { path: './assets/' } }
   })
 
   next()
