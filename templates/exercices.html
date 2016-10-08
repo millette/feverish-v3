@@ -2,7 +2,7 @@
 <body>
 <%= partials.mainmenu(data) %>
 <%= partials.breadcrumbs({ title: 'Les exercices', last: 'Exercices' }) %>
-<% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+<% if (data.credentials.roles.indexOf('teacher') !== -1 || data.credentials.roles.indexOf('_admin') !== -1) { %>
 <p><a class="button hollow" href="/new">Créer un exercice</a></p>
 <% } %>
 <table class="hover">
@@ -16,7 +16,7 @@
   <% }) %>
   </tbody>
 </table>
-<% if (data.roles.indexOf('teacher') !== -1 || data.roles.indexOf('_admin') !== -1) { %>
+<% if (data.credentials.roles.indexOf('teacher') !== -1 || data.credentials.roles.indexOf('_admin') !== -1) { %>
 <%= partials.js({ custom: ['exercices'] }) %>
 <% } else { %>
 <%= partials.js() %>
