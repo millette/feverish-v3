@@ -1,6 +1,9 @@
+<%
+var u
+var id
+%>
 <%= partials.head({ studentlist: true, title: 'Les étudiants' }) %>
 <body>
-<!-- % data.active = 'etudiants' % -->
 <%= partials.mainmenu(data) %>
 <%= partials.breadcrumbs({ title: 'Les étudiants', last: 'Étudiants' }) %>
 <p>
@@ -11,9 +14,25 @@
 <thead>
 <tr><th>Login</th><th>Consulter</th><th>Effacer</th></tr>
 </thead>
-<tbody<%- data.fixer ? ' data-fixer="true"' : '' %>>
+<tbody>
+<%
+data.rows.forEach((row, i) => {
+u = row.id.split(':')[1]
+id = 'confirm-delete-' + u.replace(/ /g, '')
+%>
+<tr data-rowi="<%- i %>" data-rev="<%- row.value.rev %>" data-uid="<%- u %>">
+<td><%- u %></td>
+<td><a href="/etudiant/<%- u %>">consulter</a></td>
+<td>
+<div class="label warning" data-toggle="<%- id %>">effacer</div>
+<div class="dropdown-pane top" id="<%- id %>" data-dropdown data-auto-focus="true" data-close-on-click="true" data-position-class="top">
+<button type="button" class="confirm button alert">Effacer <%- u %></button>
+</div>
+</td></tr>
+<% }) %>
 </tbody>
 </table>
-<%= partials.js({ custom: ['etudiants'] }) %>
+<!-- %= partials.js({ custom: ['etudiants'] }) % -->
+<%= partials.js() %>
 </body>
 </html>
