@@ -6,13 +6,19 @@ $(function () {
     $(this).parents('.dropdown-pane').foundation('close')
     const $row = $(this).parents('tr').addClass('callout alert')
     const uid = $row.data('uid')
-    const rev = $row.data('rev')
+    // const rev = $row.data('rev')
     // TODO: delete rendus de référence
     $.ajax({
-      url: '/_users/org.couchdb.user:' + uid + '?rev=' + rev,
+      url: '/etudiant/org.couchdb.user:' + uid,
       method: 'DELETE',
-      error: function () { $row.removeClass('alert').addClass('secondary') },
-      success: function () { $row.fadeOut(500, function () { $row.remove() }) }
+      error: function (e) {
+        // console.log('ERROR:', e, uid)
+        $row.removeClass('alert').addClass('secondary')
+      },
+      success: function () {
+        // console.log('SUCCESS:', uid)
+        $row.fadeOut(500, function () { $row.remove() })
+      }
     })
   })
 })
