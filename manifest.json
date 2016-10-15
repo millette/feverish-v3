@@ -5,6 +5,36 @@
     { "plugin": "vision" },
     { "plugin": "hapi-auth-cookie" },
     { "plugin": "hapi-context-credentials" },
-    { "plugin": "feverish-routes" }
+    { "plugin": "feverish-routes" },
+    {
+      "plugin": {
+        "register": "good",
+        "options": {
+          "ops": {
+            "interval": 5000
+          },
+          "reporters": {
+            "myConsoleReporter": [{
+              "module": "good-squeeze",
+              "name": "Squeeze",
+              "args": [{ "log": "*", "response": "*" }]
+            }, {
+              "module": "good-console"
+            }, "stdout"],
+            "myFileReporter": [{
+              "module": "good-squeeze",
+              "name": "Squeeze",
+              "args": [{ "ops": "*" }]
+            }, {
+              "module": "good-squeeze",
+              "name": "SafeJson"
+            }, {
+              "module": "good-file",
+              "args": ["./logs/logfile"]
+            }]
+          }
+        }
+      }
+    }
   ]
 }
