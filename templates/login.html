@@ -1,14 +1,12 @@
 <%= partials.head({ title: 'Login' }) %>
 <body>
-<div>
 <% if (data.message) { %>
 <h3><%- data.message %></h3>
 <% } %>
 <form method="post" action="/login">
   <label>Username: <input type="text" name="username"></label><br>
-  <label>Password: <input type="password" name="password"></label><br/>
+  <label>Password: <input type="password" name="password"></label><br>
   <input class="button" type="submit" value="Login">
 </form>
-<%= partials.js() %>
 </body>
 </html>
