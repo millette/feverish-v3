@@ -5,6 +5,7 @@
     { "plugin": "vision" },
     { "plugin": "hapi-auth-cookie" },
     { "plugin": "hapi-context-credentials" },
+    { "plugin": "feverish-auth" },
     { "plugin": "feverish-routes" },
     { "plugin": "feverish-statics" },
     { "plugin": "hapijs-status-monitor" },
