@@ -1,8 +1,13 @@
 /* globals $ */
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "app" }] */
 
 'use strict'
 
+$(function () {
+  $(document).foundation()
+})
+
+/*
+// eslint666 no-unused-vars: ["error", { "varsIgnorePattern": "app" }]
 var app = {
   userSorter: function (a, b) {
     var a1 = a.name ? a.name : a.doc.name
@@ -36,7 +41,6 @@ $(function () {
       '</div>'
     ].join(''))
   }
-  $(document).foundation()
 
   $('body').on('submit', '#changePassword > form', function (ev) {
     ev.preventDefault()
@@ -83,12 +87,5 @@ $(function () {
       }
     })
   })
-
-  $('button.logout').click(function () {
-    $.ajax({
-      url: '/_session',
-      method: 'DELETE',
-      complete: function () { window.location = '/_utils/groupe2016.html' }
-    })
-  })
 })
+*/
