@@ -6,6 +6,7 @@
     { "plugin": "hapi-auth-cookie" },
     { "plugin": "hapi-context-credentials" },
     { "plugin": "feverish-routes" },
+    { "plugin": "feverish-statics" },
     { "plugin": "hapijs-status-monitor" },
     { "plugin": "hapi-info" },
     {
