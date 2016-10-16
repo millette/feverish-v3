@@ -1,0 +1,10 @@
+<td><a class="label" href="/edit/<%- data._id %>">Éditer</a></td>
+<td><a class="label success" href="/corrections/<%- data._id %>">Corriger</a></td>
+<td><div class="label warning" data-toggle="<%- data._id %>">Effacer</div></td>
+<td>
+  <div class="dropdown-pane top" id="<%- data._id %>" data-dropdown data-auto-focus="true" data-close-on-click="true" data-position-class="top">
+    <button type="button" class="confirm-delete button alert" data-exid="<%- data._id %>" data-exrev="<%- data._rev %>">
+      Effacer <%- data.title %>
+    </button>
+  </div>
+</td>
