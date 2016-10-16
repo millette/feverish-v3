@@ -10,6 +10,16 @@
     { "plugin": "hapi-info" },
     {
       "plugin": {
+        "register": "hapi-imagemin-proxy",
+        "options": {
+          "path": "/img666/{param*}",
+          "plugins": [ ],
+          "source": "http://localhost:48080/rendu/"
+        }
+      }
+    },
+    {
+      "plugin": {
         "register": "good",
         "options": {
           "ops": {
