@@ -12,6 +12,12 @@
     { "plugin": "hapi-info" },
     {
       "plugin": {
+        "register": "hapi-authorization",
+        "options": { "roles": ["student", "teacher"] }
+      }
+    },
+    {
+      "plugin": {
         "register": "good",
         "options": {
           "ops": { "interval": 5000 },
