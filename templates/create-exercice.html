@@ -1,16 +1,15 @@
 <%= partials.head({ medium: true, custom: ['jquery.autocomplete'], title: 'Édition' }) %>
 <body>
 <%
-  // data.active = 'new'
-  var it = { paths: [ ['exercices', 'Exercices'] ] }
-  if (data.doc) {
-    it.title = 'Éditer exercice'
-    it.last = data.doc.title
-    it.paths.push('Édition')
-  } else {
-    it.title = 'Nouvel exercice'
-    it.last = 'Création'
-  }
+var it = { paths: [ ['exercices', 'Exercices'] ] }
+if (data.doc) {
+  it.title = 'Éditer exercice'
+  it.last = data.doc.title
+  it.paths.push('Édition')
+} else {
+  it.title = 'Nouvel exercice'
+  it.last = 'Création'
+}
 %>
 <%= partials.mainmenu(data) %>
 <%= partials.breadcrumbs(it) %>
