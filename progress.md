@@ -9,10 +9,11 @@ PAGE                      ALL     STUDENT         PROF
 /logout                   YUP     DONE    N/A     N/A     DONE
 /etudiants                YUP     NOAUTH  NOAUTH  DONE    N/A
 del etudiant              YUP     N/A     NOAUTH  N/A     DONE
+/edit/{ex}                YUP     NOAUTH  NOAUTH  DONE    DONE
+/new                      YUP     NOAUTH  NOAUTH  DONE    DONE
 /exercices                YUP     DONE    N/A     DONE    N/A
-del ex                            404
+del ex                    YUP     NOAUTH  NOAUTH  N/A     DONE
 /                                 DONE    N/A     DONE    TODO
-/edit/{ex}                        NOAUTH  NOAUTH  DONE    TODO
 /corrections/{ex}                 NOAUTH  NOAUTH  DONE    TODO
 /corrections/{ex}/{usr}           NOAUTH  NOAUTH  DONE    TODO
 /score/{ex}                       PART    N/A     NOAUTH  N/A
@@ -20,7 +21,6 @@ del ex                            404
 /etudiant/{usr}                   NOAUTH  N/A     PART    N/A
 /etudiants/new                    NOAUTH  NOAUTH  DONE    TODO
 /etudiants/lot                    NOAUTH  NOAUTH  DONE    TODO
-/new                              NOAUTH  NOAUTH  DONE    DONE
 /configure                        NOAUTH  NOAUTH  DONE    TODO
 
 ```
