@@ -48,7 +48,7 @@ if (data.doc) {
           <label for="travail-label" class="text-right middle">Travail</label>
         </div>
         <div class="small-8 column medium-6">
-          <input type="text" name="travail" id="travail-label" value="<%- data.doc && data.doc.travail || '' %>">
+          <input type="text" name="travail" id="travail-label" value="<%- data.doc && data.doc.travail || '' %>" required>
         </div>
       </div>
       <div class="row">
@@ -56,7 +56,7 @@ if (data.doc) {
           <label for="theme-label" class="text-right middle">Thème</label>
         </div>
         <div class="small-8 column medium-6">
-          <input type="text" name="theme" id="theme-label" value="<%- data.doc && data.doc.theme || '' %>">
+          <input type="text" name="theme" id="theme-label" value="<%- data.doc && data.doc.theme || '' %>" required>
         </div>
       </div>
       <div class="row">
