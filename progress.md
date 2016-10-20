@@ -14,11 +14,11 @@ del etudiant              YUP     -       NOAUTH  -       OK
 /exercices                YUP     OK      -       OK      -  
 del ex                    YUP     -       NOAUTH  -       OK  
 /                         YUP     OK      NOAUTH  OK      OK  
-/corrections/{ex}                 NOAUTH  NOAUTH  OK      TODO
-/corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
-/score/{ex}                       PART    -       NOAUTH  -  
 /resultats                        PART    -       NOAUTH  -  
 /etudiant/{usr}                   NOAUTH  -       PART    -  
+/score/{ex}                       PART    -       NOAUTH  -  
+/corrections/{ex}                 NOAUTH  NOAUTH  OK      TODO
+/corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
 /etudiants/new                    NOAUTH  NOAUTH  OK      TODO
 /etudiants/lot                    NOAUTH  NOAUTH  OK      TODO
 /configure                        NOAUTH  NOAUTH  OK      TODO

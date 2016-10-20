@@ -22,10 +22,14 @@
     </tr>
   </thead>
   <tbody>
-  <% data.rows.forEach(function (row) { %>
+  <%
+  data.rows.forEach(function (row) {
+    var corrs = data.more && data.more.corrections && data.more.corrections[row.doc._id]
+    if (!corrs) { return }
+  %>
     <tr class="exercice" id="<%- row.doc._id %>">
       <td class="json-apercu"><img width="100" src="" alt="Aperçu"></td>
-      <td class="json-reference"></td>
+      <td class="json-reference"><%- corrs.reference ? 'référence' : '' %></td>
       <td><%- row.doc.travail || '' %></td>
       <td><%- row.doc.theme || '' %></td>
       <% if (data.self) { %>
@@ -35,15 +39,20 @@
       <% } %>
       <td><%- row.doc.createdAt.split('T')[0] %></td>
       <td title="Cliquez pour lire les commentaires">
-        <a class="json-note" href="#" data-toggle="toggle-<%- row.doc._id %>"></a>
-        <div class="json-commentaires dropdown-pane top" id="toggle-<%- row.doc._id %>" data-dropdown data-auto-focus="true" data-close-on-click="true" data-position-class="top"></div>
+        <a class="json-note" href="#" data-toggle="toggle-<%- row.doc._id %>"><%- corrs.note %></a>
+        <div class="json-commentaires dropdown-pane top" id="toggle-<%- row.doc._id %>" data-dropdown data-auto-focus="true" data-close-on-click="true" data-position-class="top"><%= corrs.commentaires %></div>
       </td>
-      <td title="Pondération" class="json-ponderation"></td>
-      <td class="json-percent"></td>
+      <td title="Pondération" class="json-ponderation"><%- corrs.ponderation %></td>
+      <td class="json-percent"><%- Math.round(100 * corrs.note / corrs.ponderation) %></td>
     </tr>
   <% }) %>
   </tbody>
 </table>
-<%= partials.js({ custom: ['etudiant'] }) %>
+<pre>
+<%= JSON.stringify(data.more._attachments, null, ' ') %>
+</pre>
+
+<%= partials.js() %>
+<!-- %= partials.js({ custom: ['etudiant'] }) % -->
 </body>
 </html>
