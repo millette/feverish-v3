@@ -28,7 +28,11 @@
     if (!corrs) { return }
   %>
     <tr class="exercice" id="<%- row.doc._id %>">
-      <td class="json-apercu"><img width="100" src="" alt="Aperçu"></td>
+      <td class="json-apercu">
+        <% if (true) { %>
+        <img width="100" src="/me/<%- row.doc._id %>.jpg" alt="Aperçu">
+        <% } %>
+      </td>
       <td class="json-reference"><%- corrs.reference ? 'référence' : '' %></td>
       <td><%- row.doc.travail || '' %></td>
       <td><%- row.doc.theme || '' %></td>
