@@ -1,4 +1,5 @@
-/* globals $ */
+/*
+// globals $
 $(function () {
   'use strict'
   const student = $('body').data('student')
@@ -37,3 +38,4 @@ $(function () {
     }
   })
 })
+*/

@@ -29,8 +29,10 @@
   %>
     <tr class="exercice" id="<%- row.doc._id %>">
       <td class="json-apercu">
-        <% if (true) { %>
-        <img width="100" src="/me/<%- row.doc._id %>.jpg" alt="Aperçu">
+        <% if (row.image) { %>
+        <img width="100" src="/me/<%- row.image %>" alt="Aperçu">
+        <% } else { %>
+          <i>non disponible</i>
         <% } %>
       </td>
       <td class="json-reference"><%- corrs.reference ? 'référence' : '' %></td>
