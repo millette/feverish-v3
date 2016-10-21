@@ -1,6 +1,5 @@
 <%= partials.head({ scorelist: true, title: (data.self ? 'Mes résultats:' : 'Résultats de') + ' ' + data.student }) %>
 <body data-student="<%- data.student %>">
-<!-- % data.active = data.self && 'resultats' % -->
 <%= partials.mainmenu(data) %>
 <% if (data.self) { %>
 <%= partials.breadcrumbs({ title: 'Mes résultats', subtitle: data.student, last: 'Mes résultats' }) %>
@@ -29,8 +28,8 @@
   %>
     <tr class="exercice" id="<%- row.doc._id %>">
       <td class="json-apercu">
-        <% if (row.image) { %>
-        <img width="100" src="/me/<%- row.image %>" alt="Aperçu">
+        <% if (row.thumb) { %>
+        <img src="<%- row.thumb %>" alt="Aperçu">
         <% } else { %>
           <i>non disponible</i>
         <% } %>
@@ -54,11 +53,6 @@
   <% }) %>
   </tbody>
 </table>
-<pre>
-<%= JSON.stringify(data.more._attachments, null, ' ') %>
-</pre>
-
 <%= partials.js() %>
-<!-- %= partials.js({ custom: ['etudiant'] }) % -->
 </body>
 </html>
