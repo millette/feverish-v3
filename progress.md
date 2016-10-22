@@ -7,7 +7,7 @@ PAGE                      ALL     STUDENT         PROF
 /rendus                   YUP     OK      -       OK      -
 /login                    YUP     OK      OK      OK      OK
 /logout                   YUP     -       OK      -       OK
-/etudiants                YUP     NOAUTH  NOAUTH  OK      -
+/etudiants                YUP     NOAUTH  -       OK      -
 del etudiant              YUP     -       NOAUTH  -       OK
 /edit/{ex}                YUP     NOAUTH  NOAUTH  OK      OK
 /new                      YUP     NOAUTH  NOAUTH  OK      OK
@@ -16,11 +16,12 @@ del ex                    YUP     -       NOAUTH  -       OK
 /                         YUP     OK      NOAUTH  OK      OK
 /resultats                YUP     OK      -       NOAUTH  -
 /etudiant/{usr}           YUP     NOAUTH  -       OK      -
-/score/{ex}                       OK      TODO    NOAUTH  -
+/configure                YUP     NOAUTH  NOAUTH  OK      OK
+...
+/score/{ex}                       OK      TODO    NOAUTH  NOAUTH
 /corrections/{ex}                 NOAUTH  NOAUTH  OK      TODO
 /corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
 /etudiants/new                    NOAUTH  NOAUTH  OK      TODO
 /etudiants/lot                    NOAUTH  NOAUTH  OK      TODO
-/configure                        NOAUTH  NOAUTH  OK      TODO
 
 ```

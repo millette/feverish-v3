@@ -1,6 +1,7 @@
 /* globals $ */
 $(function () {
   'use strict'
+  /*
   const fn = function ($who, a, b, c, d) {
     const $sub = $('input[type="submit"]', $who)
     $sub.val('Merci!')
@@ -11,7 +12,7 @@ $(function () {
     const $sub = $('.tabs-content input[type="submit"]')
     $sub.addClass('secondary')
     $sub.removeClass('success')
-    $sub.val('Soumettre')
+    $sub.val('Enregistrer')
   })
   $('form.configure').submit(function (ev) {
     const $form = $(this)
@@ -24,4 +25,5 @@ $(function () {
       error: function (a, b, c, d) { console.log('err post config', a, b, c, d) }
     })
   })
+  */
 })
