@@ -1,6 +1,8 @@
 /* globals $ */
 $(function () {
   'use strict'
+
+  /*
   const $body = $('body')
   const bodyData = $body.data()
   const $score = $('#json-score')
@@ -80,4 +82,5 @@ $(function () {
       $score.addClass('warning').text('Aucun résultat disponible.')
     }
   })
+  */
 })
