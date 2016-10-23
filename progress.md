@@ -17,11 +17,10 @@ del ex                    YUP     -       NOAUTH  -       OK
 /resultats                YUP     OK      -       NOAUTH  -
 /etudiant/{usr}           YUP     NOAUTH  -       OK      -
 /configure                YUP     NOAUTH  NOAUTH  OK      OK
-...
+/etudiants/new            YUP     NOAUTH  NOAUTH  OK      OK
 /score/{ex}                       OK      TODO    NOAUTH  NOAUTH
 /corrections/{ex}                 NOAUTH  NOAUTH  OK      TODO
 /corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
-/etudiants/new                    NOAUTH  NOAUTH  OK      TODO
 /etudiants/lot                    NOAUTH  NOAUTH  OK      TODO
 
 ```
