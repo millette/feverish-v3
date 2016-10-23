@@ -10,6 +10,7 @@ $(function () {
     return parts0[0] + ' ' + parts1[0]
   }
   $('.keyed').keyup(function (ev) { $login.val(makeLogin($firstname.val(), $lastname.val())) })
+/*
   $('form#new-student').submit(function (ev) {
     ev.preventDefault()
     const $form = $(this)
@@ -49,4 +50,5 @@ $(function () {
       })
     })
   })
+*/
 })
