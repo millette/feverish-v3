@@ -1,6 +1,7 @@
-/* globals $, app */
+/* globals $ */
 $(function () {
   'use strict'
+  /*
   const exid = $('body').data('exid')
 
   const showUsers = function (d, todo) {
@@ -39,4 +40,5 @@ $(function () {
     include_docs: true
   }
   $.getJSON('/_users/_all_docs', query, fn)
+  */
 })

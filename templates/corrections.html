@@ -6,6 +6,9 @@
   last: data.doc.title,
   paths: [['exercices', 'Exercices']]
 }) %>
+<pre>
+<%= JSON.stringify(data.more, null, ' ') %>
+</pre>
 <div class="row">
   <div class="column small-12 medium-4">
     <%= partials.exercice(data) %>
