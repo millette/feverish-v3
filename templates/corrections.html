@@ -6,18 +6,24 @@
   last: data.doc.title,
   paths: [['exercices', 'Exercices']]
 }) %>
-<pre>
-<%= JSON.stringify(data.more, null, ' ') %>
-</pre>
 <div class="row">
   <div class="column small-12 medium-4">
     <%= partials.exercice(data) %>
   </div>
   <div class="column small-12 medium-8">
     <h3>À faire</h3>
-    <ul class="menu vertical" id="json"></ul>
+    <ul class="menu vertical" id="json">
+      <% data.todo.forEach((a) => { %>
+        <li><a href="/corrections/<%- data.doc._id %>/<%- a %>"><%- a %></a></li>
+      <% }) %>
+    </ul>
+
     <h3>Corrigés</h3>
-    <ul class="menu vertical" id="json2"></ul>
+    <ul class="menu vertical" id="json2">
+      <% data.done.forEach((a) => { %>
+        <li><a href="/corrections/<%- data.doc._id %>/<%- a %>"><%- a %></a></li>
+      <% }) %>
+    </ul>
   </div>
 </div>
 <%= partials.js({ custom: ['corrections'] }) %>

@@ -19,7 +19,7 @@ del ex                    YUP     -       NOAUTH  -       OK
 /configure                YUP     NOAUTH  NOAUTH  OK      OK
 /etudiants/new            YUP     NOAUTH  NOAUTH  OK      OK
 /etudiants/lot            YUP     NOAUTH  NOAUTH  OK      OK
-/corrections/{ex}                 NOAUTH  NOAUTH  PART    -
+/corrections/{ex}         YUP     NOAUTH  NOAUTH  OK      -
 /corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
 /score/{ex}                       OK      TODO    NOAUTH  NOAUTH
 ```
