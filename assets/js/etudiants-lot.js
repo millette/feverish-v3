@@ -1,6 +1,7 @@
 /* globals $ */
 $(function () {
   'use strict'
+  /*
   const $input = $('input[type="file"]')
   const fn = function ($who, a, b, c, d) {
     const $sub = $('input[type="submit"]', $who)
@@ -52,4 +53,5 @@ $(function () {
     reader.onload = blarg
     reader.readAsText(f)
   })
+  */
 })

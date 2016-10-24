@@ -16,10 +16,10 @@ suivi du premier mot du nom de famille.</p>
 tandis que <b>Jean-Yves Légaré</b> sera <b>Jean-Yves Légaré</b>.</p>
 <div class="row">
   <div class="column small-12 medium-10 medium-offset-1 large-6 large-offset-3">
-    <form>
+    <form method="post" enctype="multipart/form-data">
       <div class="row">
         <div class="column small-8">
-          <input type="file">
+          <input type="file" name="file" required>
         </div>
         <div class="column small-4">
           <input class="button secondary" type="submit" value="Importer">
@@ -28,6 +28,7 @@ tandis que <b>Jean-Yves Légaré</b> sera <b>Jean-Yves Légaré</b>.</p>
     </form>
   </div>
 </div>
-<%= partials.js({ custom: ['etudiants-lot'] }) %>
+<!-- %= partials.js({ custom: ['etudiants-lot'] }) % -->
+<%= partials.js() %>
 </body>
 </html>
