@@ -1,4 +1,5 @@
-/* globals $, MediumEditor, app */
+/* globals $, MediumEditor */
+// , app
 $(function () {
   'use strict'
   const score = function ($form, ponderation) {
@@ -25,6 +26,7 @@ $(function () {
     })
   }
 
+/*
   const userQuery = {
     startkey: '"org.couchdb.user:"',
     endkey: '"org.couchdb.user:\ufff0"',
@@ -59,6 +61,19 @@ $(function () {
     })
     $(x.origElements).hide()
   })
+*/
+
+  // const $ed = $('#commentaires-label')
+  // const x = new MediumEditor($ed[0], {
+
+  // const ed = new MediumEditor('#commentaires-label', {
+  // new MediumEditor('#commentaires-label', {
+  new MediumEditor('#commentaires-label', {  // eslint-disable-line no-new
+    autoLink: true,
+    placeholder: { text: 'Tapez votre texte ici.' },
+    toolbar: { buttons: ['h3', 'bold', 'italic', 'orderedlist', 'unorderedlist', 'quote'] }
+  })
+  // console.log('ED:', typeof ed, Object.keys(ed), ed)
 
   $('form#score-student').submit(function (ev) {
     ev.preventDefault()
