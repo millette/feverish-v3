@@ -23,7 +23,7 @@
               <label for="note-label" class="text-right middle">Note sur <%- data.doc.ponderation %></label>
             </div>
             <div class="small-9 column">
-              <input min="0" max="<%- data.doc.ponderation %>" type="number" step="any" id="note-label" name="note" value="<%- data.more && data.more.note || '' %>" required>
+              <input min="0" max="<%- data.doc.ponderation %>" type="number" step="any" id="note-label" name="note" value="<%- data.more.note || '' %>" required>
             </div>
           </div>
           <div class="row">
@@ -31,7 +31,7 @@
               <label aria-describedby="commentairesHelpText" for="commentaires-label" class="text-right">Commentaires</label>
             </div>
             <div class="small-9 column">
-              <textarea rows="10" id="commentaires-label" name="commentaires" required><%= data.more && data.more.commentaires || '' %></textarea>
+              <textarea rows="10" id="commentaires-label" name="commentaires" required><%= data.more.commentaires || '' %></textarea>
               <p class="help-text" id="commentairesHelpText">Sélectionnez du texte pour le styler.</p>
             </div>
           </div>
@@ -40,7 +40,7 @@
               <label for="reference-label" class="text-right">Rendu de référence</label>
             </div>
             <div class="small-9 column">
-              <input type="checkbox" id="reference-label" name="reference" value="<%- data.opaque %>"<%- data.more && more.reference ? ' checked' : '' %>>
+              <input type="checkbox" id="reference-label" name="reference" value="<%- data.opaque %>"<%- data.more.reference ? ' checked' : '' %>>
             </div>
           </div>
           <div class="row">
