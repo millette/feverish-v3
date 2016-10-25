@@ -1,9 +1,6 @@
 <%= partials.head({ motionui: true, title: 'Les rendus de référence' }) %>
 <body>
-<%
-// data.active = 'rendus'
-var keys
-%>
+<% var keys %>
 <%= partials.mainmenu(data) %>
 <%= partials.breadcrumbs({ title: 'Les rendus de référence', last: 'Rendus' }) %>
 <% data.rows.forEach(function (row) { %>
@@ -17,7 +14,6 @@ var keys
       <ul class="orbit-container">
         <button class="orbit-previous"><span class="show-for-sr">Suivant</span>&#9664;&#xFE0E;</button>
         <button class="orbit-next"><span class="show-for-sr">Précédent</span>&#9654;&#xFE0E;</button>
-        <!-- % for (r in row._attachments) { % -->
         <% keys.forEach(function (r) { %>
         <li class="is-active orbit-slide">
           <img class="orbit-image" src="<%- ['/rendu', row._id, r].join('/') %>" alt="rendu de référence pour l'exercice <%- row.title %>">

@@ -26,4 +26,3 @@ del ex                    YUP     -       NOAUTH  -       OK
 
 ## Et plus
 * Resize images (carrousel) with "fix-screen" logic
-* Don't show score line when there's none
