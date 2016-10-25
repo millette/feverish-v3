@@ -23,6 +23,3 @@ del ex                    YUP     -       NOAUTH  -       OK
 /corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
 /score/{ex}                       OK      TODO    NOAUTH  NOAUTH
 ```
-
-## Et plus
-* Resize images (carrousel) with "fix-screen" logic
