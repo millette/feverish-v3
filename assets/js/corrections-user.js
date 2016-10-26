@@ -2,6 +2,14 @@
 // , app
 $(function () {
   'use strict'
+
+  new MediumEditor('#commentaires-label', {  // eslint-disable-line no-new
+    autoLink: true,
+    placeholder: { text: 'Tapez votre texte ici.' },
+    toolbar: { buttons: ['h3', 'bold', 'italic', 'orderedlist', 'unorderedlist', 'quote'] }
+  })
+
+/*
   const score = function ($form, ponderation) {
     const ret = { ponderation: ponderation }
     $form.serializeArray().forEach(function (x) { ret[x.name] = x.value })
@@ -26,7 +34,6 @@ $(function () {
     })
   }
 
-/*
   const userQuery = {
     startkey: '"org.couchdb.user:"',
     endkey: '"org.couchdb.user:\ufff0"',
@@ -61,14 +68,12 @@ $(function () {
     })
     $(x.origElements).hide()
   })
-*/
 
-  // const $ed = $('#commentaires-label')
-  // const x = new MediumEditor($ed[0], {
+  const $ed = $('#commentaires-label')
+  const x = new MediumEditor($ed[0], {
 
-  // const ed = new MediumEditor('#commentaires-label', {
-  // new MediumEditor('#commentaires-label', {
-  new MediumEditor('#commentaires-label', {  // eslint-disable-line no-new
+  const ed = new MediumEditor('#commentaires-label', {
+  new MediumEditor('#commentaires-label', {
     autoLink: true,
     placeholder: { text: 'Tapez votre texte ici.' },
     toolbar: { buttons: ['h3', 'bold', 'italic', 'orderedlist', 'unorderedlist', 'quote'] }
@@ -101,4 +106,5 @@ $(function () {
     }
     saveUser(userDoc, errorFn, successFn)
   })
+  */
 })

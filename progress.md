@@ -23,3 +23,7 @@ del ex                    YUP     -       NOAUTH  -       OK
 /corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      TODO
 /score/{ex}                       OK      TODO    NOAUTH  NOAUTH
 ```
+
+## More
+* Change teacher password
+* Split rendus over many pages, by exercice
