@@ -23,7 +23,7 @@
     <%= data.more.corrections[data.doc._id].commentaires %>
   </div>
     <div id="reference-image">
-      <form id="upload-jpeg" action="/_users/org.couchdb.user:<%- data.credentials.name %>">
+      <form id="upload-jpeg" method="post" enctype="multipart/form-data">
         <fieldset class="fieldset callout primary">
         <h1 class="title text-center">Téléverser image jpeg</h1>
         <div class="row">
@@ -32,6 +32,11 @@
               <img src="<%- data.doc.thumb %>" alt="jpg" title="Choisir le fichier">
             </label>
             <input type="file" id="fichier-label" class="show-for-sr" name="jpeg" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-offset-4 small-8 medium-6 medium-offset-6 column">
+            <input class="button secondary expanded" type="submit" value="Envoyer">
           </div>
         </div>
         </fieldset>
