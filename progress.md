@@ -20,8 +20,8 @@ del ex                    YUP     -       NOAUTH  -       OK
 /etudiants/new            YUP     NOAUTH  NOAUTH  OK      OK
 /etudiants/lot            YUP     NOAUTH  NOAUTH  OK      OK
 /corrections/{ex}         YUP     NOAUTH  NOAUTH  OK      -
-/corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      OK
-/score/{ex}                       OK      TODO    NOAUTH  NOAUTH
+/corrections/{ex}/{usr}           NOAUTH  NOAUTH  OK      PART
+/score/{ex}                       OK      OK      NOAUTH  NOAUTH
 ```
 
 ## More
