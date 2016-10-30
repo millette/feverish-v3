@@ -11,7 +11,8 @@
     "lint": "standard",
     "lintall": "standard && npm run jsonlint",
     "test": "npm run lintall",
-    "start": "standard && eslint --ext .json . && rejoice -c manifest.json -p ."
+    "dev": "standard && eslint --ext .json . && rejoice -c manifest.json -p .",
+    "start": "rejoice -c manifest.json -p ."
   },
   "keywords": [
     "feverish"
